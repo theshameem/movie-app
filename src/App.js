@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import searchIcon from "./search.svg";
 import MovieCard from "./MovieCard";
-// Here is your key: 8d6252d0
 
+// API key: 8d6252d0
 const API_URL = "http://www.omdbapi.com?apikey=8d6252d0";
 
 const App = () => {
@@ -14,7 +14,6 @@ const App = () => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
 
-    console.log(data.Search);
     setMovies(data.Search);
   };
 
